@@ -1,4 +1,4 @@
-public class unemployment
+class unemployment
 {
     // 1. write 3 instance variables for class: private type variableName;
     private double unempAmnt;
@@ -95,8 +95,18 @@ public class unemployment
         town1.setJobs(5605);
         town1.toString();
         town1.print();
-        town2.print();
         town1.print(1);
+        
+        town2.getUnempAmnt();
+        town2.getReelsWatched();
+        town2.getJobs();
+        town2.print();
+        town2.setUnempAmnt(.39);
+        town2.setReelsWatched(4309032);
+        town2.setJobs(5605);
+        town2.toString();
+        town2.print();
+        town2.print(1);
        
 
     }
