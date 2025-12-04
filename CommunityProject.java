@@ -16,7 +16,7 @@ class unemployment
     // 3. Write a print() method that uses System.out.println to print out all the instance variables.
     public void print()
     {
-        System.out.println("Percent Unemployed: " + unempAmnt + "Jobs: " + jobs + "Reels Watched: " + reelsWatched);
+        System.out.println("Percent Unemployed: " + unempAmnt + " Jobs: " + jobs + " Reels Watched: " + reelsWatched);
     }
     // 4. Create accessor (get) methods for each of the instance variables.
     public double getUnempAmnt() 
@@ -50,7 +50,7 @@ class unemployment
     // 6. Create a toString() method that returns all the information in the instance variables.
     public String toString() 
     {
-        return "Percent Unemployed" + unempAmnt + "Jobs: " + jobs + "Reels Watched: " + reelsWatched;
+        return "Percent Unemployed" + unempAmnt + " Jobs: " + jobs + " Reels Watched: " + reelsWatched;
             
     }
     // 7. Write an additional method for your class that takes a parameter.
@@ -96,7 +96,7 @@ class unemployment
         town1.toString();
         town1.print();
         town1.print(1);
-        
+
         town2.getUnempAmnt();
         town2.getReelsWatched();
         town2.getJobs();
@@ -105,8 +105,7 @@ class unemployment
         town2.setReelsWatched(4309032);
         town2.setJobs(5605);
         town2.toString();
-        town2.print();
-        town2.print(1);
+        town2.print(0);
        
 
     }
