@@ -1,5 +1,26 @@
 # Community project instructions
 
+## Unit 5 Inheritance
+1. In a previous assignment you answered these questions:
+    - What do I want to achieve with this project?
+    - Who is the audience/user of this project?
+    - What features are no longer needed?
+    - What features are missing?
+2. Next you planned the code revisions needed to implement your revised Community Project with these requirements:
+    - Your project will have at least one super/parent class.
+    - Design your super/parent class such that sub/child classes can inherit all of its attributes and methods.
+    - Your super/parent class must have a default no-argument constructor.
+    - Implement at least two sub/child classes from at least one super/parent class.
+    - Your sub/child classes must inherit all of the super/parent class attributes and methods.
+    - Your sub/child classes must have at least one additional attribute and method distinct from the super/parent class.
+    - Your sub/child classes must have a default no-argument constructor that also initializes all additional attributes.
+    - Your sub/child classes must have a constructor that initializes all attributes using parameters.
+    - Your sub/child classes must have an overridden `toString()` method that returns all of its attributes' information.
+    - Your sub/child classes must have at least one additional overridden method of the super/parent class distinct from its `toString()` method.
+3. You added tables of the above listed attributes, constructors and methods for each additional class to your existing document
+4. In this assignment, you will implement these changes using your new planned code revisions.
+5. You will also need to add a new class to your project that will be the main class. This class will contain the main method and will be used to run your project.
+
 ## Unit 4 Data Collections
 In the [Unit 3 Class Creation](https://runestone.academy/ns/books/published/CSAwesomeCSD2025_26/unit3.html#unit3), you came up with a class of your own choice relevant to you or your community. 
 1. In [4.3.7 Design an Array of Objects for your Community](https://runestone.academy/ns/books/published/CSAwesomeCSD2025_26/topic-4-3-array-basics.html#design-an-array-of-objects-for-your-community), you created an array to hold objects of your class.
