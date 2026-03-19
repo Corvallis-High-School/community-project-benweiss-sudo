@@ -48,51 +48,32 @@ public class Unemployment {
                " Jobs: " + jobs + " Reels: " + reelsWatched;
     }
 }
-    public void print()
+   public class UnemploymentGreater18mo extends Unemployment {
+    private String retrainingProgram;
+    public UnemploymentGreater18mo() 
     {
-        System.out.println("Percent Unemployed: " + unempAmnt + " Jobs: " + jobs + " Reels Watched: " + reelsWatched);
+        super();
+        this.retrainingProgram = "General Education";
     }
-    // 4. Create accessor (get) methods for each of the instance variables.
-    public double getUnempAmnt() 
-    {
-        return unempAmnt;
+    public UnemploymentGreater18mo(String name, double benefit, int reels, String program) {
+        this.claimantName = name;
+        this.weeklyBenefit = benefit;
+        this.reelsWatched = reels;
+        this.retrainingProgram = program;
     }
-
-    public int getJobs() 
-    {
-        return jobs;
+    public void applyForExtension() {
+        System.out.println("Applying for extension:");
     }
-
-    public int getReelsWatched() 
-    {
-        return reelsWatched;
+    @Override
+    public void displayStatus() {
+        System.out.println("Long term unemployment, Program:" + retrainingProgram);
     }
-    
-    // 5. Create mutator (set) methods for each of the instance variables.
-    public void setUnempAmnt(double newUnempAmnt) 
-    {
-        unempAmnt = newUnempAmnt;
-    }
-
-    public void setJobs(int newJobs) {
-        jobs = newJobs;
-    }
-
-    public void setReelsWatched(int newReelsWatched) {
-        reelsWatched = newReelsWatched;
-    }
-    // 6. Create a toString() method that returns all the information in the instance variables.
-    public String toString() 
-    {
-        return "Percent Unemployed" + unempAmnt + " Jobs: " + jobs + " Reels Watched: " + reelsWatched;
-            
+    @Override
+    public String toString() {
+        return "Claimant: " + claimantName + 
+               " Benefit: " + weeklyBenefit + 
+               " Program: " + retrainingProgram + 
+               " Reels Watched: " + reelsWatched;
     }
 }
-    // 7. Write an additional method for your class that takes a parameter.
-    // For example, there could be a print method with arguments that indicate how you want to print out
-    // the information, e.g. print(format) could print the data according to an argument that is "plain"
-    // or "table" where the data is printed in a table drawn with dashes and lines (|).
-    
-    // 8. Write a main method that constructs at least 2 objects of your class
-    // using the constructor and then calls all of the methods that you created above to test them.
-
+}
