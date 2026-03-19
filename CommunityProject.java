@@ -1,19 +1,25 @@
-class unemployment
-{
-    // 1. write 3 instance variables for class: private type variableName;
-    private double unempAmnt;
-    private int jobs;
-    private int reelsWatched;
-    
-    // 2. Add a constructor with 3 parameters to set all of the instance variables to the given parameters.
-    private unemployment(double unempAmnt, int jobs, int reelsWatched)
+public class Unemployment {
+    protected String claimantName;
+    protected double weeklyBenefit;
+    protected int reelsWatched;
+    public Unemployment() 
     {
-        this.unempAmnt = unempAmnt;
-        this.jobs = jobs;
-        this.reelsWatched = reelsWatched;
+        this.claimantName = " ";
+        this.weeklyBenefit = 0.0;
+        this.reelsWatched = 0;
     }
-        
-    // 3. Write a print() method that uses System.out.println to print out all the instance variables.
+    public void displayStatus() 
+    {
+        System.out.println("Unemployment Status");
+    }
+    public void print(int format) 
+    {
+        if (format == 1) {
+            System.out.println(claimantName + ", " + weeklyBenefit);
+        } else {
+            System.out.println("Claimant: " + claimantName + ", Benefit: " + weeklyBenefit);
+        }
+    }
     public void print()
     {
         System.out.println("Percent Unemployed: " + unempAmnt + " Jobs: " + jobs + " Reels Watched: " + reelsWatched);
@@ -57,25 +63,7 @@ class unemployment
     // For example, there could be a print method with arguments that indicate how you want to print out
     // the information, e.g. print(format) could print the data according to an argument that is "plain"
     // or "table" where the data is printed in a table drawn with dashes and lines (|).
-    public void print(int format) 
-    {
-        if (format <= 0) 
-        {
-
-            System.out.println("Percent Unemployed: " + unempAmnt + ", Jobs: " + jobs + ", Reels Watched: " + reelsWatched);
-        } 
-        else if (format == 1) 
-        {
-
-            System.out.println("|" + unempAmnt + " | " + jobs + " | " + reelsWatched + "|");
-        } 
-        else 
-        {
-            System.out.println(unempAmnt);
-            System.out.println(jobs);
-            System.out.println(reelsWatched);
-        }
-    }
+    
     // 8. Write a main method that constructs at least 2 objects of your class
     // using the constructor and then calls all of the methods that you created above to test them.
     public static void main(String[] args)
