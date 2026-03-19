@@ -20,6 +20,34 @@ public class Unemployment {
             System.out.println("Claimant: " + claimantName + ", Benefit: " + weeklyBenefit);
         }
     }
+    public class UnemploymentGreater6mo extends Unemployment {
+    private int jobs;
+    public UnemploymentGreater6mo()
+    {
+        super();
+        this.jobs = 0;
+    }
+    public UnemploymentGreater6mo(String name, double benefit, int jobs, int reels) 
+    {
+        this.claimantName = name;
+        this.weeklyBenefit = benefit;
+        this.jobs = jobs;
+        this.reelsWatched = reels;
+    }
+
+    @Override
+    public void displayStatus() 
+    {
+        System.out.println("Status: Long-term (>6mo). Audit required for " + jobs + " applications.");
+    }
+
+    @Override
+    public String toString() 
+    {
+        return "Claimant: " + claimantName + " Benefit: " + weeklyBenefit + 
+               " Jobs: " + jobs + " Reels: " + reelsWatched;
+    }
+}
     public void print()
     {
         System.out.println("Percent Unemployed: " + unempAmnt + " Jobs: " + jobs + " Reels Watched: " + reelsWatched);
@@ -59,6 +87,7 @@ public class Unemployment {
         return "Percent Unemployed" + unempAmnt + " Jobs: " + jobs + " Reels Watched: " + reelsWatched;
             
     }
+}
     // 7. Write an additional method for your class that takes a parameter.
     // For example, there could be a print method with arguments that indicate how you want to print out
     // the information, e.g. print(format) could print the data according to an argument that is "plain"
@@ -66,36 +95,4 @@ public class Unemployment {
     
     // 8. Write a main method that constructs at least 2 objects of your class
     // using the constructor and then calls all of the methods that you created above to test them.
-    public static void main(String[] args)
-    {
-       // Construct 2 objects of your class using the constructor with different values
-        unemployment town1 = new unemployment(0.23, 3949, 2934892);
-        unemployment town2 = new unemployment(0.04, 432, 34895);
-        
-
-       // call all of the objects methods to test them
-        town1.getUnempAmnt();
-        town1.getReelsWatched();
-        town1.getJobs();
-        town1.print();
-        town1.setUnempAmnt(.39);
-        town1.setReelsWatched(4309032);
-        town1.setJobs(5605);
-        town1.toString();
-        town1.print();
-        town1.print(1);
-
-        town2.getUnempAmnt();
-        town2.getReelsWatched();
-        town2.getJobs();
-        town2.print();
-        town2.setUnempAmnt(.39);
-        town2.setReelsWatched(4309032);
-        town2.setJobs(5605);
-        town2.toString();
-        town2.print(0);
-       
-
-    }
-}
 
