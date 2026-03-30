@@ -20,7 +20,7 @@ public class UnemploymentGreater18mo extends Unemployment
     @Override
     public void displayStatus() 
     {
-        System.out.println("Long term unemployment, Program:" + retrainingProgram);
+        System.out.println(">18mo unemployment, Program: " + retrainingProgram);
     }
     @Override
     public String toString()

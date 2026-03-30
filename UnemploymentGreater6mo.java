@@ -17,7 +17,7 @@ public class UnemploymentGreater6mo extends Unemployment
     @Override
     public void displayStatus() 
     {
-        System.out.println("Status: Long-term (>6mo). Audit required for " + jobs + " applications.");
+        System.out.println("Status: >6mo Audit required for " + jobs + " applications.");
     }
 
     @Override
