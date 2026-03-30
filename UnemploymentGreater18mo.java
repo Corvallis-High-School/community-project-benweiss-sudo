@@ -25,9 +25,6 @@ public class UnemploymentGreater18mo extends Unemployment
     @Override
     public String toString()
     {
-        return "Claimant: " + claimantName + 
-            " Benefit: " + weeklyBenefit + 
-            " Program: " + retrainingProgram + 
-            " Reels Watched: " + reelsWatched;
+        return "Claimant: " + claimantName + " Benefit: " + weeklyBenefit + " Program: " + retrainingProgram + " Reels Watched: " + reelsWatched;
     }
 }
